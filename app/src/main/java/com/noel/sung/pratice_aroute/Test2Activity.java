@@ -33,7 +33,7 @@ public class Test2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_test2);
         ARouter.getInstance().inject(this);
 
-        speakService.speak(this, "不需要實作，直接認定對應SpeakService之Path");
+        speakService.speak(this, "測試");
 
         Log.e("T3", "參數-> " + "name: " + name + "  age: " + age + " boy: " + boy + " high:" + high + " obj: " + obj);
     }
