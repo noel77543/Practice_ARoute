@@ -20,11 +20,12 @@ public class Test1Activity extends AppCompatActivity {
     String test;
     @Autowired(name = "Key3")
     TestObject testObject;
+    //直接映射取值
     @Autowired
     boolean Key2;
 
-
-    private Uri uri = Uri.parse("sung://noel" + RouteInfo.ROUTE_TEST_2_ACTIVITY + "?name=alex&age=18&boy=true&high=180&obj={\"name\":\"jack\",\"id\":\"666\"}");
+    //[manifest的host]://[manifest的scheme]+ [取值的目標路徑]+"?"+[key-value 參數群]
+   private Uri uri = Uri.parse("sung://noel" + RouteInfo.ROUTE_TEST_2_ACTIVITY + "?name=alex&age=18&boy=true&high=180&obj={\"name\":\"jack\",\"id\":\"666\"}");
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
